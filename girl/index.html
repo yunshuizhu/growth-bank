@@ -151,7 +151,7 @@ body.style-dongman .bankbook { border-radius:20px; }
 .style-opt small { font-size:.6rem; color:var(--tx2); font-weight:400; }
 .style-opt.on { border-color:var(--acc2); color:var(--acc2); background:var(--card); }
 .theme-fab {
-  position:fixed; top:calc(env(safe-area-inset-top,0px) + 12px); left:14px; z-index:60;
+  position:fixed; top:calc(env(safe-area-inset-top,0px) + 12px); right:14px; z-index:60;
   width:52px; height:52px; border-radius:50%;
   background:linear-gradient(160deg,var(--bookA),var(--bookB));
   display:flex; align-items:center; justify-content:center; flex-direction:column;
@@ -258,7 +258,7 @@ body#loginBody { background:linear-gradient(180deg,#0a1120,#182238); color:#e8e4
 /* ============ 孩子首页 ============ */
 .home-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px; }
 .home-name { font-size:.75rem; color:var(--tx2); letter-spacing:1px; }
-.home-date { text-align:center; font-size:.8rem; color:var(--tx2); margin:8px 0 2px; padding:0 60px; }
+.home-date { text-align:center; font-size:.8rem; color:var(--tx2); margin:8px 0 2px; }
 .home-hello { text-align:center; font-size:1.05rem; font-weight:700; margin-bottom:18px; }
 
 .bankbook {
@@ -304,17 +304,6 @@ body#loginBody { background:linear-gradient(180deg,#0a1120,#182238); color:#e8e4
 .bb-contrib { font-size:.7rem; margin-top:6px; color:var(--green); font-weight:600; }
 .bb-flowlink { text-align:right; font-size:.7rem; color:var(--tx2); margin-top:8px; text-decoration:underline; }
 
-.pause-fab {
-  position:fixed; top:calc(env(safe-area-inset-top,0px) + 12px); right:14px; z-index:60;
-  width:52px; height:52px; border-radius:50%;
-  background:linear-gradient(160deg,#7db8f0,#3d6fb8);
-  display:flex; align-items:center; justify-content:center; flex-direction:column;
-  box-shadow:0 4px 16px rgba(61,111,184,.5); opacity:.94;
-  color:#fff; font-size:.55rem; font-weight:700;
-}
-.pause-fab .pf-ico { font-size:1.35rem; line-height:1; margin-bottom:1px; }
-.pause-fab:active { transform:scale(.93); }
-
 .home-actions { margin-top:6px; }
 .big-earn {
   width:82%; margin:0 auto; display:flex; min-height:62px; border-radius:40px;
@@ -322,9 +311,8 @@ body#loginBody { background:linear-gradient(180deg,#0a1120,#182238); color:#e8e4
   letter-spacing:2px; box-shadow:0 8px 22px rgba(212,175,55,.4);
 }
 .big-earn:active { transform:scale(.97); }
-.home-subbtns { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
-.home-subbtns .btn { flex:1 1 40%; min-height:52px; font-size:.88rem; }
-.home-subbtns .btn-calm { flex:1 1 100%; border-color:var(--blue); color:var(--blue); font-weight:800; }
+.home-subbtns { display:flex; gap:12px; margin-top:14px; }
+.home-subbtns .btn { flex:1; min-height:52px; font-size:.9rem; }
 .bag-corner {
   position:fixed; right:14px; bottom:calc(env(safe-area-inset-bottom,0px) + 14px); z-index:60;
   width:54px; height:54px; border-radius:16px; font-size:1.5rem;
@@ -453,38 +441,6 @@ body#loginBody { background:linear-gradient(180deg,#0a1120,#182238); color:#e8e4
 .rw-rule { font-size:.66rem; color:var(--tx2); line-height:1.5; margin-top:3px; }
 .rw-badge { font-size:.62rem; padding:1px 6px; border-radius:6px; background:var(--card2); border:1px solid var(--line); color:var(--tx2); margin-left:6px; }
 
-/* ============ 现场练习 / 冷静室 ============ */
-.mind-grid { display:grid; grid-template-columns:1fr; gap:10px; margin-top:14px; }
-.mind-card {
-  background:rgba(255,255,255,.06); border:1.5px solid rgba(160,210,255,.35);
-  border-radius:16px; padding:14px 16px; color:#dfe8f5; text-align:left;
-}
-.mind-card.on { border-color:#bde1ff; background:rgba(125,184,240,.18); }
-.mind-card .mc-name { font-size:.95rem; font-weight:800; display:flex; align-items:center; gap:8px; }
-.mind-card .mc-sub { font-size:.72rem; color:#8fa0bd; line-height:1.55; margin-top:5px; }
-.mind-step-idx { font-size:.7rem; color:#8fa0bd; text-align:center; letter-spacing:1px; margin-top:10px; }
-.mind-step-main {
-  text-align:center; font-size:1.25rem; font-weight:900; line-height:1.6;
-  color:#eaf4ff; margin:16px 4px; min-height:4.2rem; letter-spacing:1px;
-}
-.mind-tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:16px; }
-.mind-tile {
-  min-height:64px; border-radius:14px; font-size:.85rem; font-weight:800;
-  background:rgba(255,255,255,.08); border:1.5px solid rgba(160,210,255,.4); color:#dfe8f5;
-  display:flex; align-items:center; justify-content:center; text-align:center; padding:8px;
-}
-.mind-tile.on { background:rgba(160,210,255,.32); border-color:#bde1ff; color:#fff; transform:scale(.96); }
-.mind-tile:disabled { opacity:.35; }
-.emotion-row { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:10px; }
-.emotion-btn {
-  min-width:64px; min-height:64px; border-radius:14px; background:rgba(255,255,255,.08);
-  border:1.5px solid rgba(160,210,255,.35); color:#dfe8f5; font-size:.72rem; font-weight:700;
-  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
-}
-.emotion-btn .eb-ico { font-size:1.4rem; }
-.emotion-btn.on { background:rgba(160,210,255,.3); border-color:#bde1ff; color:#fff; }
-
-
 /* ============ 凭条弹窗 ============ */
 #modalLayer {
   position:fixed; inset:0; z-index:200; display:none;
@@ -518,44 +474,6 @@ body#loginBody { background:linear-gradient(180deg,#0a1120,#182238); color:#e8e4
 
 .confetti { position:fixed; top:-12px; z-index:210; font-size:1rem; pointer-events:none; animation:fall linear forwards; }
 @keyframes fall { to { transform:translateY(105vh) rotate(340deg); opacity:.7; } }
-
-/* ============ 冷静室 ============ */
-#scr-calm { position:fixed; inset:0; z-index:150; overflow-y:auto; padding:24px 18px; max-width:none;
-  background:radial-gradient(circle at 50% 30%, #17253f, #0a1120 75%); color:#dfe8f5; }
-.calm-title { text-align:center; font-size:1.1rem; font-weight:800; margin:18px 0 6px; letter-spacing:2px; }
-.calm-sub { text-align:center; font-size:.82rem; color:#8fa0bd; margin-bottom:24px; line-height:1.6; }
-.ice-block {
-  width:210px; height:210px; margin:0 auto; border-radius:28px; position:relative;
-  background:linear-gradient(160deg, rgba(160,210,255,.25), rgba(90,140,220,.18));
-  border:2px solid rgba(160,210,255,.5); backdrop-filter:blur(2px);
-  display:flex; align-items:center; justify-content:center; cursor:pointer;
-  box-shadow:0 0 40px rgba(110,170,255,.2), inset 0 0 30px rgba(140,190,255,.15);
-  touch-action:none; user-select:none;
-}
-.ice-fire { font-size:4rem; transition:transform .3s, opacity .3s; filter:drop-shadow(0 0 12px #ff8c40); }
-.ice-frost {
-  position:absolute; inset:0; border-radius:28px; pointer-events:none;
-  background:linear-gradient(180deg, rgba(210,235,255,.95), rgba(160,205,250,.85));
-  clip-path:inset(100% 0 0 0); transition:clip-path .12s linear;
-}
-.ice-progress { width:210px; margin:18px auto 0; }
-.ice-progress .bar { height:10px; border-radius:6px; background:rgba(255,255,255,.12); overflow:hidden; }
-.ice-progress .fill { height:100%; background:linear-gradient(90deg,#7db8f0,#bde1ff); width:0%; border-radius:6px; transition:width .12s linear; }
-.ice-progress .txt { text-align:center; font-size:.75rem; color:#8fa0bd; margin-top:8px; }
-
-.breath-circle {
-  width:200px; height:200px; margin:12vh auto 24px; border-radius:50%;
-  background:radial-gradient(circle, rgba(125,184,240,.4), rgba(125,184,240,.08));
-  border:3px solid rgba(160,210,255,.6);
-  display:flex; align-items:center; justify-content:center;
-  animation:breath 8s ease-in-out infinite; font-size:2rem; font-weight:900; color:#fff;
-  text-shadow:0 0 14px rgba(125,184,240,.9);
-}
-@keyframes breath { 0%{transform:scale(.62);} 50%{transform:scale(1);} 100%{transform:scale(.62);} }
-.breath-word { text-align:center; font-size:1.3rem; font-weight:900; letter-spacing:6px; color:#cfe3ff; min-height:2rem; }
-
-.calm-exits { margin-top:26px; display:flex; flex-direction:column; gap:14px; }
-.calm-exits .btn { min-height:56px; font-size:1rem; width:100%; max-width:320px; margin:0 auto; }
 
 /* ============ 取款柜台 ============ */
 .counter-visual {
@@ -727,7 +645,6 @@ select.mini-input { -webkit-appearance:none; }
   <div class="screen active" id="scr-login"></div>
   <div class="screen" id="scr-home"></div>
   <div class="screen" id="scr-tasks"></div>
-  <div class="screen" id="scr-calm"></div>
   <div class="screen" id="scr-withdraw"></div>
   <div class="screen" id="scr-box"></div>
   <div class="screen" id="scr-backpack"></div>
@@ -776,69 +693,62 @@ const sTick=()=>tone(300,.04,0,'square',.05);
 
 /* ===================== 默认数据（单人版 · 普通激励型） ===================== */
 const T_Elder=[
- {id:'e1',emoji:'📝',name:'完成学校作业',type:'duty',pts:2,split:['先难后易，最难的作业先做','写完一科，勾掉任务单','全部写完自己检查一遍','收拾桌面，准备明天课本']},
- {id:'e2',emoji:'🎒',name:'睡前理书包',type:'duty',pts:1,split:['对照课表把书放进书包','作业本放进文件夹','水壶接满放侧袋','书包挂门把手上']},
- {id:'e3',emoji:'⏰',name:'按时起床不赖床',type:'duty',pts:1,split:[]},
- {id:'e4',emoji:'🛏️',name:'21:30前上床',type:'duty',pts:2,split:[]},
- {id:'e5',emoji:'🤸',name:'跳绳500下',type:'gold',pts:3,split:[]},
- {id:'e6',emoji:'📖',name:'阅读30分钟',type:'duty',pts:1,split:[]},
- {id:'e7',emoji:'🧹',name:'整理自己房间',type:'gold',pts:3,split:[]},
- {id:'e8',emoji:'🍽️',name:'帮忙做家务',type:'gold',pts:2,split:[]},
- {id:'e10',emoji:'🧘',name:'正念现场练习',type:'gold',pts:5,mind:true,split:['进冷静角，选一个练习（方形呼吸 / 5-4-3-2-1 着陆 / 冰块呼吸）','跟着做完，中途走神也没关系，拉回来就好','练完点一下现在的心情，积分自动入账']},
+ {id:'e1',emoji:'📝',name:'放学主动写完作业',type:'duty',pts:3,split:['放下书包先喝口水','坐下把作业本拿出来','写完一页给妈妈看一眼']},
+ {id:'e2',emoji:'📖',name:'英语绘本阅读15分钟',type:'duty',pts:2,split:['自己挑一本英文绘本','手指着字跟读','听音频跟读一遍']},
+ {id:'e3',emoji:'⏰',name:'按时起床不赖床',type:'duty',pts:1,split:['闹钟响了坐起来','自己穿衣服','刷牙洗脸']},
+ {id:'e4',emoji:'🛏️',name:'早睡（21:00前上床）',type:'duty',pts:2,split:['20:30洗澡','20:50收好玩具','21:00躺下关灯']},
+ {id:'e5',emoji:'🤸',name:'跳绳100下',type:'gold',pts:1,split:['热身活动脚踝','分4次跳，每次25下','跳完拍拍小腿']},
+ {id:'e6',emoji:'🎒',name:'主动整理书包',type:'duty',pts:1,split:['把书放回书包','水壶放进侧袋','书包挂到门口']},
+ {id:'e7',emoji:'🍽️',name:'帮忙做家务',type:'gold',pts:2,split:['选一件小家务（擦桌子/摆碗筷）','做完请妈妈检查','工具放回原处']},
+ {id:'e8',emoji:'🥣',name:'自己吃饭不用喂',type:'gold',pts:1,split:['坐好不乱跑','自己拿勺子吃完','把碗放到水池']},
 ];
 const T_Younger=[
- {id:'y1',emoji:'📝',name:'完成学校作业',type:'duty',pts:2,split:['先难后易，最难的作业先做','写完一科，勾掉任务单','全部写完自己检查一遍','收拾桌面，准备明天课本']},
- {id:'y2',emoji:'📖',name:'阅读30分钟',type:'duty',pts:1,split:[]},
- {id:'y3',emoji:'🎒',name:'睡前理书包',type:'duty',pts:1,split:['对照课表把书放进书包','作业本放进文件夹','水壶接满放侧袋','书包挂门把手上']},
- {id:'y4',emoji:'⏰',name:'按时起床不赖床',type:'duty',pts:1,split:[]},
- {id:'y5',emoji:'🛏️',name:'21:30前上床',type:'duty',pts:2,split:[]},
- {id:'y6',emoji:'🤸',name:'跳绳500下',type:'gold',pts:3,split:[]},
- {id:'y7',emoji:'🔤',name:'背10个英语单词',type:'gold',pts:2,split:[]},
- {id:'y8',emoji:'✍️',name:'练字一页',type:'gold',pts:2,split:[]},
- {id:'y9',emoji:'📔',name:'写日记一篇',type:'gold',pts:3,split:[]},
- {id:'y10',emoji:'🍽️',name:'帮忙做家务',type:'gold',pts:2,split:[]},
- {id:'y11',emoji:'🧘',name:'正念现场练习',type:'gold',pts:5,mind:true,split:['进冷静角，选一个练习（方形呼吸 / 5-4-3-2-1 着陆 / 冰块呼吸）','跟着做完，中途走神也没关系，拉回来就好','练完点一下现在的心情，积分自动入账']},
+ {id:'y1',emoji:'📝',name:'放学主动写完作业',type:'duty',pts:3,split:['放下书包先喝口水','坐下把作业本拿出来','写完一页给妈妈看一眼']},
+ {id:'y2',emoji:'📖',name:'英语绘本阅读15分钟',type:'duty',pts:2,split:['自己挑一本英文绘本','手指着字跟读','听音频跟读一遍']},
+ {id:'y3',emoji:'🎒',name:'主动整理书包',type:'duty',pts:1,split:['把书放回书包','水壶放进侧袋','书包挂到门口']},
+ {id:'y4',emoji:'🛏️',name:'早睡（21:00前上床）',type:'duty',pts:2,split:['20:30洗澡','20:50收好玩具','21:00躺下关灯']},
+ {id:'y5',emoji:'🍽️',name:'帮忙做家务',type:'duty',pts:2,split:['选一件小家务（擦桌子/摆碗筷）','做完请妈妈检查','工具放回原处']},
+ {id:'y6',emoji:'🤸',name:'跳绳100下',type:'gold',pts:1,split:['热身活动脚踝','分4次跳，每次25下','跳完拍拍小腿']},
+ {id:'y7',emoji:'🥣',name:'自己吃饭不用喂',type:'gold',pts:1,split:['坐好不乱跑','自己拿勺子吃完','把碗放到水池']},
+ {id:'y8',emoji:'⏰',name:'按时起床不赖床',type:'duty',pts:1,split:['闹钟响了坐起来','自己穿衣服','刷牙洗脸']},
 ];
-/* 奖励：一律"具体、有时长、有时限、有次数"，避免"一个小愿望"这类可被放大的口子 */
+/* 日常积分（5岁）：作业3 · 英语绘本2 · 早睡2 · 家务2 · 整理书包1 · 跳绳1 · 自己吃饭1 · 起床1
+   全做完约 13 币/天，小奖励 3-5 币，攒 1 天左右就能兑现 */
+/* 奖励：具体、有时长、有时限、有次数，适合 5 岁孩子的小额即时奖励 */
 const R_Elder=[
- {id:'re1',emoji:'📺',name:'周末多看30分钟动画（仅周末1次）',cost:10,limit:'week',max:1,rule:'周末任一天，看完这30分钟就结束，不能累积到第二天。'},
- {id:'re2',emoji:'🍝',name:'指定一顿周末晚餐（1次）',cost:15,limit:'week',max:1,rule:'只能指定一道菜或一家店，不能点外卖零食顶替。'},
- {id:'re3',emoji:'🌙',name:'周五晚睡30分钟（1次）',cost:8,limit:'week',max:1,rule:'仅周五晚，最多晚30分钟，不能换成别的福利。'},
- {id:'re4',emoji:'🤝',name:'请朋友来家里玩半天（1次）',cost:30,limit:'month',max:1,rule:'半天=4小时以内，需提前1天和爸妈约时间。'},
- {id:'re5',emoji:'🍦',name:'自己挑一个甜品（1次）',cost:8,limit:'week',max:1,rule:'单价不超过10元，只能在一次购物里兑换。'},
- {id:'re6',emoji:'📚',name:'买一本喜欢的书（1次）',cost:15,limit:'month',max:2,rule:'在书单里选一本，不能换成玩具或零食。'},
+ {id:'re1',emoji:'📖',name:'睡前多讲一个故事（1次）',cost:3,limit:'week',max:3,rule:'讲完约定的1本后再多讲1本，只能睡前用，不能换成看手机。'},
+ {id:'re2',emoji:'🍦',name:'自己挑一个小零食（1次）',cost:5,limit:'week',max:1,rule:'单价不超过5元，当场选一样，不能囤起来。'},
+ {id:'re3',emoji:'🧩',name:'和爸妈玩一局桌游（1次）',cost:6,limit:'week',max:2,rule:'玩一局就结束，由孩子选游戏，不能换成看电视。'},
+ {id:'re4',emoji:'📺',name:'多看15分钟动画（仅周末1次）',cost:8,limit:'week',max:1,rule:'周末任一天，看完15分钟就关，不能累积到第二天。'},
+ {id:'re5',emoji:'🎨',name:'买一盒贴纸/蜡笔（1次）',cost:10,limit:'month',max:1,rule:'单价不超过20元，在店里选一样，不能换成玩具。'},
+ {id:'re6',emoji:'📚',name:'挑一本新绘本（1次）',cost:12,limit:'month',max:1,rule:'在书店或书单选一本，单价不超过30元。'},
+ {id:'re7',emoji:'🛝',name:'周末去一次公园/游乐场（1次）',cost:15,limit:'week',max:1,rule:'周末去一次，玩到约定时间就回家，需提前和爸妈约好。'},
+ {id:'re8',emoji:'🍰',name:'周末甜品一次（1次）',cost:10,limit:'week',max:1,rule:'周末吃一次，由孩子选一款，不能加第二份。'},
 ];
-const R_Younger=[
- {id:'ry1',emoji:'📺',name:'周末多看30分钟动画（仅周末1次）',cost:10,limit:'week',max:1,rule:'周末任一天，看完这30分钟就结束，不能累积到第二天。'},
- {id:'ry2',emoji:'🍦',name:'自己挑一个零食（1次）',cost:8,limit:'week',max:1,rule:'单价不超过10元，只能在一次购物里兑换。'},
- {id:'ry3',emoji:'📚',name:'买一本喜欢的书（1次）',cost:15,limit:'month',max:2,rule:'在书单里选一本，不能换成玩具或零食。'},
- {id:'ry4',emoji:'🎀',name:'自选一件小文具/发饰（1次）',cost:12,limit:'month',max:2,rule:'单价不超过20元，选完就结束，不能换更贵的。'},
- {id:'ry5',emoji:'👭',name:'请好朋友来家里玩半天（1次）',cost:30,limit:'month',max:1,rule:'半天=4小时以内，需提前1天和爸妈约时间。'},
- {id:'ry6',emoji:'🎬',name:'周末点播一部电影（1次）',cost:20,limit:'week',max:1,rule:'一部电影，看完就关，不能换看剧集连续看。'},
-];
+const R_Younger=R_Elder.map(r=>Object.assign({},r));
 const PRIV_Elder=[
  {id:'p1',emoji:'🛡️',name:'免吼金牌',desc:'被提醒时出示这张卡，大人先深呼吸，换个好语气再说一遍。',use:'child'},
  {id:'p2',emoji:'🔄',name:'重来一次卡',desc:'事情搞砸了？出示这张卡，重做一次，不扣分也不发火。',use:'child'},
+ {id:'p3',emoji:'🤗',name:'抱抱券',desc:'什么时候想抱抱都可以用，永远有效。',use:'none'},
 ];
 const PRIV_Younger=[
+ {id:'p1',emoji:'🛡️',name:'免吼金牌',desc:'被提醒时出示这张卡，大人先深呼吸，换个好语气再说一遍。',use:'child'},
+ {id:'p2',emoji:'🔄',name:'重来一次卡',desc:'事情搞砸了？出示这张卡，重做一次，不扣分也不发火。',use:'child'},
  {id:'p3',emoji:'🤗',name:'抱抱券',desc:'什么时候想抱抱都可以用，永远有效。',use:'none'},
- {id:'p4',emoji:'🌙',name:'周五晚睡券',desc:'某个周五晚上，可以比平时晚睡30分钟。',use:'child'},
+ {id:'p4',emoji:'📖',name:'多听一个故事券',desc:'晚上睡觉前出示，可以多听一个故事（仅限一次）。',use:'child'},
 ];
 const BOX_Elder=[
- {e:'🎮',n:'周末30分钟游戏时间'},{e:'🥞',n:'指定周六早餐'},{e:'♟️',n:'和爸爸下一盘棋'},
- {e:'🍦',n:'冰淇淋一个'},{e:'✏️',n:'自选一支新笔/橡皮'},{e:'💪',n:'谢谢惠顾·攒钱再来'}
+ {e:'⭐',n:'贴纸一张'},{e:'📖',n:'多听一个故事'},{e:'🧩',n:'和爸妈玩一局桌游'},
+ {e:'🍦',n:'小零食一个'},{e:'📺',n:'多看10分钟动画'},{e:'🤗',n:'谢谢惠顾·抱一下'}
 ];
-const BOX_Younger=[
- {e:'✨',n:'神秘文具一件'},{e:'🎀',n:'小发饰一个'},{e:'🍫',n:'喜欢的小零食'},{e:'📚',n:'心愿书单里挑一本'},
- {e:'🍰',n:'周末甜品一次'},{e:'🤗',n:'谢谢惠顾·抱一下'}
-];
+const BOX_Younger=BOX_Elder.map(p=>Object.assign({},p));
 
 /* ===================== 存储层 ===================== */
 const KEY='growthBankGirl.v1';
 var DB=null;
 function kidBase(name,tasks,rewards,priv){
   return {name:name,tasks:tasks,rewards:rewards,coins:0,contrib:0,flow:[],
-    done:{},calmDone:'',calmDays:{},rwUse:{},mapPos:0,boxTickets:0,bag:priv.map(p=>({id:p.id,emoji:p.emoji,name:p.name,desc:p.desc,use:p.use,type:'priv',got:'初始配发'})),
+    done:{},calmDone:'',rwUse:{},mapPos:0,boxTickets:0,bag:priv.map(p=>({id:p.id,emoji:p.emoji,name:p.name,desc:p.desc,use:p.use,type:'priv',got:'初始配发'})),
     chgDates:[],hot:null};
 }
 function freshDB(){
@@ -846,7 +756,7 @@ function freshDB(){
     elder:kidBase('沐沐',T_Elder,R_Elder,PRIV_Elder),
     younger:kidBase('星星',T_Younger,R_Younger,PRIV_Younger),
     reviews:[],notices:[],
-    settings:{pwd:'2026',rate:10,friday:true,sound:true,boxCost:10,calmPts:2,calmLimit:3,theme:{palette:'pink',style:'dongman'}}};
+    settings:{pwd:'2026',rate:10,friday:true,sound:true,boxCost:10,theme:{palette:'pink',style:'dongman'}}};
 }
 function loadDB(){
   try{ const raw=localStorage.getItem(KEY); DB=raw?JSON.parse(raw):null; }catch(e){ DB=null; }
@@ -1011,7 +921,7 @@ function notice(msg,warn){
   DB.notices.unshift({d:todayStr(),t:nowHM(),msg:String(msg),warn:!!warn});
   if(DB.notices.length>80)DB.notices.length=80;
 }
-function clearAllTimers(){ clearInterval(tmr); clearInterval(breathTimer); clearInterval(iceT); clearInterval(calmT); }
+function clearAllTimers(){ clearInterval(tmr); }
 
 /* ===================== 登录页 ===================== */
 function goLogin(){
@@ -1070,7 +980,6 @@ function renderHome(k){
   const hot=isE&&u.hot===todayStr();
   $('#scr-home').innerHTML=`
    <div class="theme-fab" onclick="openTheme()"><div class="pf-ico">🎨</div>换肤</div>
-   <div class="pause-fab" onclick="enterCalm()"><div class="pf-ico">🧊</div>冷静角</div>
    <div class="home-date">${fmtD(todayStr())}</div>
    <div class="home-hello">${hello()}，${esc(u.name)}</div>
    <div class="bankbook ${isE?'bb-elder':'bb-younger'} ${isE&&u.coins>=100?'gilt':''} ${hot?'hot':''}">
@@ -1079,7 +988,7 @@ function renderHome(k){
          <div class="bb-label">GROWTH BANK · ${esc(u.name)}专户</div>
          <div class="bb-coins"><span class="coin-ico">🪙</span>${u.coins}</div>
          <div class="bb-rmb">≈ ${(u.coins/S.rate).toFixed(1)} 元 · 贡献值 ${u.contrib}</div>
-         <div class="bb-last">${hot?'🔥 行长提醒：今天火气有点大，右上角冷静角随时可用':(u.flow[0]?'最近：'+u.flow[0].r:'新开户，去赚第一笔吧')}</div>
+         <div class="bb-last">${hot?'🔥 行长提醒：今天火气有点大，记得慢一点说话':(u.flow[0]?'最近：'+u.flow[0].r:'新开户，去赚第一笔吧')}</div>
        </div>
        <div class="bb-flowlink" onclick="openFlow('${k}')">查看流水 ›</div>
      </div>
@@ -1088,7 +997,6 @@ function renderHome(k){
    <div class="home-actions">
      <button class="big-earn btn-gold" onclick="openTasks()">💰 去赚钱</button>
      <div class="home-subbtns">
-       <button class="btn btn-line btn-calm" onclick="enterCalm()">🧘 现在很生气？进冷静角做一次练习</button>
        <button class="btn btn-line" onclick="openWithdraw()">🏧 取款</button>
        <button class="btn btn-line" onclick="openBox()">🎁 盲盒</button>
      </div>
@@ -1136,7 +1044,6 @@ function renderTasksE(){
   const u=DB.elder, list=u.tasks, d=doneToday('elder');
   if(tIdx>list.length-1)tIdx=Math.max(0,list.length-1);
   $('#scr-tasks').innerHTML=`
-   <div class="pause-fab" onclick="enterCalm()"><div class="pf-ico">🧊</div>暂停</div>
    <div class="topbar"><button class="back" onclick="goKid(KID)">‹</button><div class="tb-title">今日任务</div><div class="tb-right">${doneCount('elder')}/${list.length}</div></div>
    <div class="swipe-hint">一次只看一件 · 左右滑动换任务</div>
    <div class="task-swipe-wrap" id="tsw"><div class="task-track" id="tTrack" style="transform:translateX(-${tIdx*100}%)">
@@ -1231,9 +1138,7 @@ function renderTasksY(){
          <div class="yt-meta"><span class="tag ${t.type==='duty'?'tag-duty':'tag-gold'}">${t.type==='duty'?'分内事':'加分项'}</span><span class="yt-pts">🪙+${t.pts}</span></div>
        </div>
        ${del}
-       ${t.mind
-         ? '<button class="yt-done-btn" style="min-width:78px;font-size:.72rem" onclick="enterCalm()">'+(done?'✓ 已练':'去练习')+'</button>'
-         : '<button class="yt-done-btn" onclick="yDone(&quot;'+t.id+'&quot;)">'+(done?'✓':'完成')+'</button>'}
+       <button class="yt-done-btn" onclick="yDone(&quot;'+t.id+'&quot;)">'+(done?'✓':'完成')+'</button>
      </div>`;}).join('')}
    <div style="text-align:center;margin:14px 0 90px"><button class="btn btn-line" onclick="openCustomTask()">➕ 我要加一个任务</button></div>
    <div class="bag-corner bag-younger" onclick="openBag()">🎒${u.bag.length?'<span class="bag-badge">'+u.bag.length+'</span>':''}</div>`;
@@ -1305,305 +1210,6 @@ function delCustomTask(id){
   const ts=todayStr();
   if(DB.elder.done[ts]) DB.elder.done[ts]=DB.elder.done[ts].filter(x=>x!==id);
   save(); renderTasksY();
-}
-
-/* ===================== 现场练习（冷静角 · 可随时进入） =====================
-   设计原则：
-   1) 真生气时脑子是"离线"的，所以第一屏只给三个大字按钮，不用读长文。
-   2) 每个练习都拆成一步一步，有明确倒计时和进度，孩子只需跟着做下一件事。
-   3) 走神不算失败，提示"拉回来就好"，不批评。
-   4) 练完自己点心情 → 积分自动入账（每天上限由设置控制）。
-*/
-let iceT=null,iceP=0,breathTimer=null;
-let calmT=null,calmLeft=0,calmTotal=0,calmCur=null,calmStep=0,calmPaused=false;
-let calmFeel=null,calmStartAt=0;
-
-const CALM_TYPES={
-  breathe:{emoji:'🌬️',name:'方形呼吸',sub:'吸气4秒 · 停4秒 · 呼气4秒 · 停4秒',secs:96},
-  scan:{emoji:'🖐️',name:'5-4-3-2-1 着陆',sub:'用五官把大脑拉回现在，一步一步来',secs:90},
-  ice:{emoji:'🧊',name:'冰块呼吸',sub:'用力握冰，把火苗慢慢冻住',secs:75}
-};
-
-function enterCalm(){ sPop(); calmCur=null; calmFeel=null; calmPaused=false; renderCalmPick(); go('calm'); }
-function calmExit(){
-  clearInterval(calmT); clearInterval(iceT); clearInterval(breathTimer);
-  goKid(KID||'younger');
-}
-
-/* ---------- 第一屏：选练习 ---------- */
-function renderCalmPick(){
-  clearInterval(calmT); clearInterval(iceT); clearInterval(breathTimer);
-  const k=KID||'younger', u=DB[k];
-  const left=calmLeftToday(k);
-  const mindTask=u.tasks.find(t=>t.mind);
-  const mindDone=!!(mindTask&&doneToday(k).includes(mindTask.id));
-  const hot=u.hot===todayStr();
-  $('#scr-calm').innerHTML=`
-   <div class="topbar"><button class="back" onclick="calmExit()">‹</button><div class="tb-title">冷静角</div><div class="tb-right">${mindDone?'今日已打卡':'今日待打卡'}</div></div>
-   <div class="calm-title">${hot?'🔥 现在心里有火？先停一下':'🌤️ 花 1 分钟，让自己回到地面'}</div>
-   <div class="calm-sub">不用想太多，选一个，跟着做。<br>做不完也没关系，随时可以停。</div>
-   <div class="mind-grid">
-     ${Object.keys(CALM_TYPES).map(id=>{
-       const c=CALM_TYPES[id];
-       return `<div class="mind-card" onclick="startCalm('${id}')">
-         <div class="mc-name">${c.emoji} ${c.name}</div>
-         <div class="mc-sub">${c.sub} · ${c.secs>=90?'约 1 分半':(c.secs>=75?'约 75 秒':'约 1 分钟')}</div>
-       </div>`;
-     }).join('')}
-   </div>
-   <div class="calm-exits">
-     <button class="btn btn-line" onclick="calmExit()">先不练，回去</button>
-   </div>
-   <div style="text-align:center;font-size:.7rem;color:#8fa0bd;margin:18px 0 40px;line-height:1.7">
-     ${mindDone?('今日任务已完成。再加练一次 = 金币 +'+calmPts()+'，今天还能加练 '+left+' 次'):('完成一次练习 = 完成今日「正念现场练习」任务（金币 +'+(mindTask?mindTask.pts:5)+'）')}<br>
-     如果还是很气，可以再来一次，不算失败。
-   </div>`;
-}
-// 每次奖励 / 每天上限读家长设置
-const calmPts=()=>Math.max(1,Math.min(20,(DB.settings&&DB.settings.calmPts)||2));
-const calmLimit=()=>Math.max(1,Math.min(10,(DB.settings&&DB.settings.calmLimit)||3));
-function calmLeftToday(k){
-  const t=todayStr();
-  const n=(DB[k].calmDays&&DB[k].calmDays[t])||0;
-  return Math.max(0,calmLimit()-n);
-}
-
-/* ---------- 开始练习 ---------- */
-function startCalm(id){
-  clearInterval(calmT); clearInterval(iceT); clearInterval(breathTimer);
-  calmCur=id; calmStep=0; calmPaused=false; calmFeel=null;
-  calmTotal=CALM_TYPES[id].secs; calmLeft=calmTotal; calmStartAt=Date.now();
-  sPop();
-  if(id==='breathe')renderBreathe();
-  else if(id==='scan')renderScan();
-  else renderIceBreath();
-}
-
-/* ---------- 通用：底部倒计时条 ---------- */
-function calmBarHtml(label){
-  return `<div class="ice-progress" style="width:260px;max-width:100%;margin:22px auto 0">
-    <div class="bar"><div class="fill" id="cFill" style="width:0%"></div></div>
-    <div class="txt" id="cTxt">${esc(label||'')}</div></div>`;
-}
-function calmTick(label,onEnd){
-  clearInterval(calmT);
-  calmT=setInterval(()=>{
-    if(calmPaused)return;
-    calmLeft--;
-    const f=$('#cFill'),t=$('#cTxt');
-    if(f)f.style.width=Math.min(100,100*(calmTotal-calmLeft)/calmTotal)+'%';
-    if(t)t.textContent=(label?label+' · ':'')+'还剩 '+calmLeft+' 秒';
-    if(calmLeft<=0){ clearInterval(calmT); (onEnd||calmDone)(); }
-  },1000);
-}
-
-/* ---------- 练习 A：方形呼吸（4-4-4-4，6 轮） ---------- */
-function renderBreathe(){
-  $('#scr-calm').innerHTML=`
-   <div class="topbar"><button class="back" onclick="calmBackConfirm()">‹</button><div class="tb-title">🌬️ 方形呼吸</div><div class="tb-right" id="brd">第 1 / 6 轮</div></div>
-   <div class="calm-sub">方框变大时吸气，停一下<br>变小时呼气，再停一下</div>
-   <div style="position:relative;width:240px;height:240px;margin:12px auto 6px">
-     <div style="position:absolute;inset:0;border-radius:22px;border:2px dashed rgba(160,210,255,.35)"></div>
-     <div class="breath-square" id="brSq" style="
-       position:absolute;left:0;top:0;width:100%;height:100%;border-radius:22px;
-       border:4px solid rgba(160,210,255,.75);
-       background:radial-gradient(circle at 50% 50%, rgba(125,184,240,.28), rgba(125,184,240,.05));
-       transition:all 4s linear;transform:scale(.72)"></div>
-     <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;color:#eaf4ff;letter-spacing:3px" id="brW">吸 ——</div>
-   </div>
-   ${calmBarHtml('方形呼吸')}
-   <div class="calm-exits">
-     <button class="btn btn-line" onclick="calmPauseToggle(this)">⏸ 暂停一下</button>
-     <button class="btn btn-line" onclick="calmDone(true)">我觉得好点了，提前结束</button>
-   </div>`;
-  const phases=[['吸 ——',1],['停 ——',1],['呼 ——',.72],['停 ——',.72]];
-  const paintPhase=ph=>{
-    const [w,sc]=phases[ph%4];
-    const sq=$('#brSq'),wd=$('#brW'),bd=$('#brd');
-    if(sq)sq.style.transform='scale('+sc+')';
-    if(wd)wd.textContent=w;
-    if(bd)bd.textContent='第 '+(Math.min(6,Math.floor(ph/4)+1))+' / 6 轮';
-  };
-  paintPhase(0);
-  let elapsed=0;
-  calmT=setInterval(()=>{
-    if(calmPaused)return;
-    calmLeft--; elapsed++;
-    const f=$('#cFill'),t=$('#cTxt');
-    if(f)f.style.width=Math.min(100,100*elapsed/calmTotal)+'%';
-    if(t)t.textContent='方形呼吸 · 还剩 '+calmLeft+' 秒';
-    if(calmLeft<=0){ clearInterval(calmT); sGood(); calmDone(); return; }
-    if(elapsed%4===0)paintPhase(elapsed/4);
-  },1000);
-}
-function calmPauseToggle(btn){
-  calmPaused=!calmPaused;
-  if(btn)btn.textContent=calmPaused?'▶ 继续':'⏸ 暂停一下';
-}
-function calmBackConfirm(){
-  if(confirm('退出这次练习？这次就不算完成哦。')){ clearInterval(calmT); renderCalmPick(); }
-}
-
-/* ---------- 练习 B：5-4-3-2-1 着陆 ---------- */
-const SCAN_STEPS=[
-  {n:'5',t:'看：说出你看见的 5 样东西',s:'别管好不好看，随便 5 样就行。比如「灯、杯子、门、桌角、我的鞋」。',secs:24},
-  {n:'4',t:'摸：感受 4 处触感',s:'脚踩地、屁股坐椅、衣服蹭手、背靠墙。慢慢说「我摸到了…」。',secs:22},
-  {n:'3',t:'听：听出 3 种声音',s:'可能是空调声、楼下车声、自己的呼吸声。听不到就听最安静的那一下。',secs:16},
-  {n:'2',t:'闻：闻出 2 种味道',s:'闻不到也没关系，可以说「空气的味道」。',secs:12},
-  {n:'1',t:'尝：说 1 种嘴里的味道',s:'最后慢慢咽一下口水，告诉自己：我在这里。',secs:16}
-];
-function renderScan(){
-  calmStep=0;
-  renderScanStep();
-}
-function renderScanStep(){
-  const st=SCAN_STEPS[calmStep];
-  const last=calmStep===SCAN_STEPS.length-1;
-  $('#scr-calm').innerHTML=`
-   <div class="topbar"><button class="back" onclick="calmBackConfirm()">‹</button><div class="tb-title">🖐️ 5-4-3-2-1 着陆</div><div class="tb-right">第 ${calmStep+1} / ${SCAN_STEPS.length} 步</div></div>
-   <div class="mind-step-idx">用五官，把大脑从"火山"拉回"现在"</div>
-   <div class="mind-step-main">${st.t}</div>
-   <div class="calm-sub">${st.s}</div>
-   <div class="mind-tiles">
-     ${Array.from({length:+st.n}).map((_,i)=>`<button class="mind-tile" id="tile${i}" onclick="scanTile(${i})">${i+1}</button>`).join('')}
-   </div>
-   <div style="text-align:center;font-size:.7rem;color:#8fa0bd;margin-top:10px">找到一个就点一下，凑够 ${st.n} 个</div>
-   ${calmBarHtml('第 '+(calmStep+1)+' 步')}
-   <div class="calm-exits">
-     <button class="btn ${last?'btn-gold':'btn-line'}" id="scanNext" onclick="scanNext()">${last?'这一步也做了 → 结束':'做完了，下一步 →'}</button>
-   </div>`;
-  calmTotal=st.secs; calmLeft=st.secs;
-  calmTick('第 '+(calmStep+1)+' 步',scanNext);
-}
-function scanTile(i){
-  const b=$('#tile'+i); if(!b)return;
-  b.classList.toggle('on'); sTick();
-}
-function scanNext(){
-  clearInterval(calmT);
-  if(calmStep>=SCAN_STEPS.length-1){ calmDone(); return; }
-  calmStep++; sPop(); renderScanStep();
-}
-
-/* ---------- 冰块：按住就冻住，不松手也不会退回去 ---------- */
-function bindIce(){
-  const b=$('#iceBlock'); if(!b)return;
-  let holding=false;
-  clearInterval(iceT); iceP=0;
-  iceT=setInterval(()=>{
-    if(iceP>=100){ if(holding){/*保持全冰*/} return; }
-    if(holding){ iceP=Math.min(100,iceP+0.6); icePaint(); if(iceP>=100)iceFull(); }
-  },50);
-  b.addEventListener('pointerdown',e=>{holding=true;try{b.setPointerCapture(e.pointerId);}catch(x){}});
-  b.addEventListener('pointerup',()=>holding=false);
-  b.addEventListener('pointercancel',()=>holding=false);
-  b.addEventListener('pointerleave',()=>holding=false);
-}
-function icePaint(){
-  const f=$('#iceFrost'); if(!f)return;
-  f.style.clipPath='inset('+(100-iceP)+'% 0 0 0)';
-  const fire=$('#iceFire');
-  if(fire)fire.style.opacity=String(Math.max(.15,1-iceP/100));
-}
-function iceFull(){
-  sDing();
-  const fire=$('#iceFire');
-  if(fire){fire.textContent='❄️';fire.style.transform='scale(1.1)';fire.style.opacity='1';}
-  if(iceP>=100&&iceT){ /* 下一轮由全局计时器重置 */ }
-}
-
-/* ---------- 练习 C：冰块呼吸（保留冰块手感，加呼吸节奏 + 时长） ---------- */
-function renderIceBreath(){
-  $('#scr-calm').innerHTML=`
-   <div class="topbar"><button class="back" onclick="calmBackConfirm()">‹</button><div class="tb-title">🧊 冰块呼吸</div><div class="tb-right" id="iceRound">第 1 / 5 轮</div></div>
-   <div class="calm-sub">按住冰块，慢慢呼气，让它一点点结冰<br>松手也不会变回去，按住就行</div>
-   <div class="ice-block" id="iceBlock"><div class="ice-fire" id="iceFire">🔥</div><div class="ice-frost" id="iceFrost"></div></div>
-   <div class="breath-word" id="iceW" style="margin-top:14px">吸 ——</div>
-   ${calmBarHtml('冰块呼吸')}
-   <div class="calm-exits">
-     <button class="btn btn-line" onclick="calmDone(true)">我觉得好点了，提前结束</button>
-   </div>`;
-  const ROUND=15;
-  let round=1, phase=0;
-  calmTotal=CALM_TYPES.ice.secs; calmLeft=calmTotal;
-  let elapsed=0;
-  const setRound=()=>{
-    clearInterval(iceT); iceP=0; icePaint();
-    const fire=$('#iceFire');
-    if(fire){fire.textContent='🔥';fire.style.transform='none';fire.style.opacity='1';}
-    bindIce(); sPop();
-    const r=$('#iceRound'); if(r)r.textContent='第 '+Math.min(5,round)+' / 5 轮';
-    const w=$('#iceW'); if(w)w.textContent='吸 ——';
-  };
-  iceP=0; icePaint(); bindIce();
-  calmT=setInterval(()=>{
-    if(calmPaused)return;
-    calmLeft--; elapsed++;
-    const f=$('#cFill'),t=$('#cTxt'),w=$('#iceW');
-    if(f)f.style.width=Math.min(100,100*elapsed/calmTotal)+'%';
-    if(t)t.textContent='冰块呼吸 · 还剩 '+calmLeft+' 秒';
-    if(w&&elapsed%4===0){ phase++; w.textContent=(phase%2===1)?'呼 ——':'吸 ——'; }
-    if(elapsed>0&&elapsed%ROUND===0&&elapsed<calmTotal){ round++; setRound(); }
-    if(calmLeft<=0){ clearInterval(calmT); clearInterval(iceT); sGood(); calmDone(); }
-  },1000);
-}
-
-/* ---------- 结束：心情打分 + 自动入账 ---------- */
-function calmDone(early){
-  clearInterval(calmT); clearInterval(iceT); clearInterval(breathTimer);
-  const mins=Math.max(1,Math.round((Date.now()-calmStartAt)/60000));
-  renderCalmFeel(early,mins);
-}
-function renderCalmFeel(early,mins){
-  const feels=[['😌','平静了'],['🙂','好一点'],['😐','还是一般'],['😣','还有点气'],['😡','还是很气']];
-  $('#scr-calm').innerHTML=`
-   <div class="topbar"><button class="back" onclick="calmExit()">‹</button><div class="tb-title">练习完成</div><div class="tb-right">${mins} 分钟</div></div>
-   <div style="text-align:center;font-size:2.6rem;margin-top:14px">${early?'🌤️':'🏆'}</div>
-   <div class="calm-title">${early?'你主动停下来了，这很厉害':'时间到，你坚持做完了'}</div>
-   <div class="calm-sub">现在感觉怎么样？点一个就好<br>没有"应该"的感觉，说实话就行</div>
-   <div class="emotion-row">
-     ${feels.map((f,i)=>`<button class="emotion-btn ${calmFeel===f[1]?'on':''}" onclick="calmPickFeel(${i})"><span class="eb-ico">${f[0]}</span>${f[1]}</button>`).join('')}
-   </div>
-   <div class="calm-exits" style="margin-top:26px">
-     <button class="btn btn-gold" id="feelOk" ${calmFeel?'':'style="opacity:.45"' } onclick="calmFinish()">${calmFeel?'记下来，领积分 →':'先点一个心情'}</button>
-     <button class="btn btn-line" onclick="startCalm('${calmCur||'breathe'}')">再练一次</button>
-   </div>`;
-}
-function calmPickFeel(i){
-  const feels=['平静了','好一点','还是一般','还有点气','还是很气'];
-  calmFeel=feels[i]||'还是一般'; sTick();
-  renderCalmFeel(false,Math.max(1,Math.round((Date.now()-calmStartAt)/60000)));
-}
-function calmFinish(){
-  if(!calmFeel){ sBad(); return; }
-  const k=KID||'younger', t=todayStr();
-  const name=calmCur&&CALM_TYPES[calmCur]?CALM_TYPES[calmCur].name:'现场练习';
-  DB[k].calmDays=DB[k].calmDays||{};
-  const doneTimes=DB[k].calmDays[t]||0;
-  let got=0, taskDoneFlag=false, noReward=false;
-  // 当天第一次练习：直接完成今日「正念现场练习」任务，拿任务积分
-  const mindTask=DB[k].tasks.find(x=>x.mind);
-  if(mindTask&&!doneToday(k).includes(mindTask.id)){
-    completeTask(k,mindTask); got=mindTask.pts; taskDoneFlag=true;
-  }else if(doneTimes<calmLimit()){
-    // 之后想再练几次，也鼓励，但金币更少、有上限
-    got=calmPts(); DB[k].coins+=got;
-    addFlow(k,'+',got,'[金币] 再加练一次：'+name);
-  }else{
-    noReward=true;
-  }
-  DB[k].calmDays[t]=doneTimes+1;
-  const hard=(calmFeel==='还有点气'||calmFeel==='还是很气');
-  notice(DB[k].name+' 完成现场练习（'+name+'）· 感觉：'+calmFeel,hard);
-  save(); sGood(); confetti(24);
-  modal(slip('现场练习 · 记录单',[
-    ['户名',DB[k].name],['练习',name],
-    ['用时',Math.max(1,Math.round((Date.now()-calmStartAt)/60000))+' 分钟'],
-    ['结束感觉',calmFeel],
-    ['今日任务',taskDoneFlag?'已自动打勾 ✔':'之前已完成'],
-    ['奖励',got?('金币 +'+got):(noReward?'今日次数已满':'—')]
-  ],got?'已入账':'已记录','green',hard?'还生气很正常，你已经做对了一件事：没有让火继续烧。':'你把自己拉回来了，这就是练习的意义。')
-   +'<button class="btn btn-gold btn-block" style="margin-top:8px" onclick="closeModal();calmExit()">回银行</button>');
 }
 
 /* ===================== 取款柜台 ===================== */
@@ -1891,7 +1497,7 @@ function renderParent(tab){
     body='<div class="overview-kids">'
      +['younger'].map(k=>{
        const u=DB[k];
-       return '<div class="ov-kid"><div class="ok-name">'+esc(u.name)+'（11岁·五年级）</div>'
+       return '<div class="ov-kid"><div class="ok-name">'+esc(u.name)+'（5岁·幼儿园大班）</div>'
          +'<div class="ok-coins">🪙 '+u.coins+'</div>'
          +'<div class="ok-streak">贡献 '+u.contrib+' · 🔥 '+streakOf(k)+' 天</div>'
          +'<div class="ok-streak">今日 '+doneCount(k)+'/'+u.tasks.length+' 项 · 背包 '+u.bag.length+'</div></div>';
@@ -1924,7 +1530,6 @@ function renderParent(tab){
       return '<div class="card"><div style="font-weight:800;margin-bottom:8px">'+esc(u.name)+' 的任务</div>'
        +u.tasks.map(t=>'<div class="task-edit-row" style="align-items:flex-start"><div class="te-name">'+t.emoji+' '+esc(t.name)
          +(t.custom?' <span style="font-size:.65rem;color:var(--blue)">·孩子自定</span>':'')
-         +(t.mind?' <span style="font-size:.65rem;color:var(--blue)">·现场练习</span>':'')
          +(t.split&&t.split.length?' <span style="font-size:.65rem;color:var(--tx2)">·拆 '+t.split.length+' 步</span>':'')
          +(t.timer?' <span style="font-size:.65rem;color:var(--blue)">·计时'+t.timer+'分</span>':'')
          +(t.split&&t.split.length?'<div class="rw-rule">'+t.split.map((s,i)=>(i+1)+'. '+esc(s)).join(' → ')+'</div>':'')
@@ -1962,11 +1567,6 @@ function renderParent(tab){
      +'<div class="switch-row"><div><div class="sw-name">'+esc(y.name)+'周五高息</div><div class="sw-desc">周五取款每 1 元少付 2 币</div></div>'
      +'<div class="sw-toggle '+(S.friday?'on':'')+'" onclick="DB.settings.friday=!DB.settings.friday;save();renderParent(3)"></div></div>'
      +'<button class="btn btn-gold btn-block" onclick="saveSettings()">保存设置</button></div>'
-     +'<div class="card"><span class="mini-label">现场练习（冷静角）</span>'
-     +'<div class="form-row"><div class="fr"><span class="mini-label">每次奖励金币</span><input class="mini-input" id="st-cpt" type="number" value="'+S.calmPts+'" min="1" max="20"></div>'
-     +'<div class="fr"><span class="mini-label">每天最多计次数</span><input class="mini-input" id="st-clm" type="number" value="'+S.calmLimit+'" min="1" max="10"></div></div>'
-     +'<div style="font-size:.68rem;color:var(--tx2);line-height:1.6">练习本身不要设"必须做完才给分"，中间退出也算一次尝试。</div>'
-     +'<button class="btn btn-gold btn-block" style="margin-top:10px" onclick="saveCalmSettings()">保存练习设置</button></div>'
      +'<div class="card"><span class="mini-label" style="color:var(--red)">危险区</span>'
      +'<button class="btn btn-red-line btn-block" onclick="askReset()">🗑 清空全部数据</button>'
      +'<div style="font-size:.68rem;color:var(--tx2);margin-top:8px">数据仅保存在本机浏览器 localStorage，换设备/清缓存会丢失</div></div>';
@@ -2006,13 +1606,6 @@ function addReward(k){
   if(!rl){ sBad(); alert('请写清用法规则：多久、几次、能不能换别的。写具体的奖励才不容易被钻空子。'); return; }
   DB[k].rewards.push({id:uid(),emoji:em,name:nm,cost:cs,limit:lm==='none'?'':lm,max:mx,rule:rl});
   save(); sPop(); renderParent(2);
-}
-function saveCalmSettings(){
-  const S=DB.settings;
-  S.calmPts=Math.max(1,Math.min(20,parseInt($('#st-cpt').value)||2));
-  S.calmLimit=Math.max(1,Math.min(10,parseInt($('#st-clm').value)||3));
-  save(); sPop(); renderParent(3);
-  modal('<div style="text-align:center;padding:10px">✅ 练习设置已保存</div>'+btnClose('好'));
 }
 function delReward(k,id){
   DB[k].rewards=DB[k].rewards.filter(r=>r.id!==id);
@@ -2079,7 +1672,6 @@ goLogin();
     else if(g==='box'){ goKid(k); openBox(); }
     else if(g==='bag'){ goKid(k); openBag(); }
     else if(g==='flow'){ openFlow(k); }
-    else if(g==='calm'){ goKid(k); openTasks(); }
     else if(g==='pwd'){ applyTheme(); document.body.id=''; renderPwd(); go('pwd'); }
     else if(g==='parent'&&q.get('p')===DB.settings.pwd){ applyTheme(); document.body.id=''; renderParent(0); go('parent'); }
   }catch(e){}
