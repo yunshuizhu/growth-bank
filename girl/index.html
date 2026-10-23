@@ -2,6 +2,35 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- CHARSET SELF-HEAL: keep this block pure ASCII.
+     Some static hosts reply "Content-Type: text/html" without charset, or with a wrong one,
+     and an HTTP header always beats <meta charset>, which shows Chinese text as mojibake.
+     If the document was not decoded as UTF-8, re-fetch the bytes, decode as UTF-8 and rewrite. -->
+<script>
+(function () {
+  function isUtf8() { return /utf-?8/i.test(document.characterSet || document.charset || ""); }
+  if (isUtf8()) return;
+  try { if (sessionStorage.getItem("__utf8heal")) return; sessionStorage.setItem("__utf8heal", "1"); } catch (e) {}
+  function rewrite(text) {
+    document.open("text/html", "replace");
+    document.write(text);
+    document.close();
+  }
+  try {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", location.href, true);
+    xhr.responseType = "arraybuffer";
+    xhr.onload = function () {
+      try {
+        var txt = new TextDecoder("utf-8").decode(new Uint8Array(xhr.response));
+        if (txt.indexOf("\u52a0\u5206") >= 0 || txt.indexOf("\u6210\u957f") >= 0) rewrite(txt);
+      } catch (e) {}
+    };
+    xhr.send();
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
