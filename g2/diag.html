@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIAG</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",sans-serif;margin:0;padding:18px;background:#0d1626;color:#e8f0ff}
+h1{font-size:20px;margin:0 0 6px}
+h2{font-size:14px;font-weight:400;margin:0 0 16px;color:#8fa6c9}
+.ok{color:#5ee08a}.bad{color:#ff6b6b}
+table{border-collapse:collapse;width:100%;font-size:13px}
+td{border-bottom:1px solid #22314d;padding:8px 4px;word-break:break-all;vertical-align:top}
+td:first-child{color:#8fa6c9;width:34%}
+</style>
+</head>
+<body>
+<h1 id="h">checking...</h1>
+<h2 id="sub">If you can read this line, rendering works.</h2>
+<table id="t"></table>
+<script>
+(function(){
+  var rows=[], ok=true;
+  function add(k,v){rows.push([k,v]);}
+  document.getElementById("h").className="ok";
+  document.getElementById("h").textContent="JS OK";
+  add("URL", location.href);
+  add("charset", document.characterSet || document.charset);
+  add("UA", navigator.userAgent);
+  add("screen", screen.width + "x" + screen.height + " dpr" + (window.devicePixelRatio||1));
+  add("localStorage", (function(){try{localStorage.setItem("_t","1");localStorage.removeItem("_t");return "ok";}catch(e){return "blocked: "+e.name;}})());
+  add("fetch", typeof fetch);
+  add("XHR", typeof XMLHttpRequest);
+  add("Intl", typeof Intl);
+  add("now", new Date().toString());
+  var tb=document.getElementById("t");
+  for(var i=0;i<rows.length;i++){
+    var tr=document.createElement("tr");
+    var a=document.createElement("td"); a.textContent=rows[i][0];
+    var b=document.createElement("td"); b.textContent=String(rows[i][1]);
+    tr.appendChild(a); tr.appendChild(b); tb.appendChild(tr);
+  }
+})();
+</script>
+</body>
+</html>
